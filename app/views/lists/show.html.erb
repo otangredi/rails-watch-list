@@ -1,8 +1,11 @@
-<h1><%= @list.name %></h1>
+<div class="container">
+  <h1><%= @list.name %></h1>
+  <a class="text-decoration-none" href="/lists">Back to the Lobby</a>
+  <div>
+    <span><%= link_to 'Add a new Bookmark to this List', new_list_bookmark_path(@list) %></span>
+  </div>
+</div>
 
 <% @list.bookmarks.each do |bookmark| %>
   <li><%= bookmark.comment %></li>
 <% end %>
-
-<%= link_to 'Add a new Bookmark', new_list_bookmark_path(@list) %>
-<%= link_to 'Back to Lists', lists_path %>

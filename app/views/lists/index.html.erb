@@ -1,7 +1,15 @@
-<h1>My Lists</h1>
+<div class="banner" style="background-image: url(https://cdn.wallpapersafari.com/89/98/7kA8ze.jpg);">
+  <div class="container">
+    <h1>Polar Hamlet</h1>
+    <p>The best app</p>
+    <a class="btn btn-ghost" href="/lists/new">Add a category</a>
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-<% end %>
-
-<%= link_to 'Create a movie list', new_list_path %>
+<div class="cards p-3">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: url()">
+      <a class="btn"><%= link_to list.name, list_path(list) %></a>
+    </div>
+  <% end %>
+</div>
